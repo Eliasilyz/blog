@@ -75,12 +75,11 @@
 
     <!-- Vercel Web Analytics -->
     <script>
-        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+        window.va = window.va || function() { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
 
     <style>
-        /* ==================== CSS CUSTOM PROPERTIES ==================== */
         :root {
             --bg-primary: #050508;
             --bg-surface: #0a0a11;
@@ -95,7 +94,6 @@
             --accent-glow: rgba(0, 230, 118, 0.18);
             --accent-dim: rgba(0, 230, 118, 0.35);
             --accent-secondary: #64ffda;
-            --danger-accent: #ff5252;
             --font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
             --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Cascadia Code', 'Consolas', monospace;
             --nav-height: 56px;
@@ -106,8 +104,6 @@
             --transition-fast: 140ms ease;
             --transition-smooth: 280ms cubic-bezier(0.22, 0.61, 0.36, 1);
         }
-
-        /* ==================== RESET & BASE ==================== */
         *,
         *::before,
         *::after {
@@ -115,7 +111,6 @@
             margin: 0;
             padding: 0;
         }
-
         html {
             scroll-behavior: smooth;
             scroll-padding-top: calc(var(--nav-height) + 20px);
@@ -124,7 +119,6 @@
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
         }
-
         body {
             background-color: var(--bg-primary);
             color: var(--text-primary);
@@ -132,13 +126,9 @@
             line-height: 1.7;
             min-height: 100vh;
             letter-spacing: 0.01em;
-            background-image:
-                radial-gradient(circle at 50% 0%, rgba(0, 230, 118, 0.03) 0%, transparent 55%),
-                radial-gradient(circle at 85% 20%, rgba(100, 255, 218, 0.02) 0%, transparent 45%);
+            background-image: radial-gradient(circle at 50% 0%, rgba(0, 230, 118, 0.03) 0%, transparent 55%), radial-gradient(circle at 85% 20%, rgba(100, 255, 218, 0.02) 0%, transparent 45%);
             background-attachment: fixed;
         }
-
-        /* Subtle dot grid overlay */
         body::before {
             content: '';
             position: fixed;
@@ -151,8 +141,6 @@
             mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.15) 60%, transparent 100%);
             -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.15) 60%, transparent 100%);
         }
-
-        /* ==================== TYPOGRAPHY ==================== */
         h1,
         h2,
         h3,
@@ -209,8 +197,6 @@
             color: var(--accent);
             font-weight: 500;
         }
-
-        /* ==================== LAYOUT ==================== */
         body>header,
         body>main,
         body>footer {
@@ -230,8 +216,6 @@
                 padding-right: 1.75rem;
             }
         }
-
-        /* ==================== NAVBAR ==================== */
         .navbar {
             position: sticky;
             top: 0;
@@ -344,8 +328,6 @@
                 border-radius: var(--radius-sm);
             }
         }
-
-        /* ==================== HERO SECTION ==================== */
         #hero {
             padding: 3.5rem 0 2rem;
         }
@@ -390,8 +372,6 @@
             margin: 1.25rem 0 1.5rem;
             opacity: 0.8;
         }
-
-        /* ==================== SECTIONS GENERAL ==================== */
         section {
             padding: 2.5rem 0;
         }
@@ -413,8 +393,6 @@
         .section-title {
             margin-bottom: 1.5rem;
         }
-
-        /* ==================== METRICS CARDS ==================== */
         .metrics-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -477,8 +455,6 @@
             letter-spacing: 0.03em;
             font-weight: 500;
         }
-
-        /* ==================== CARDS (GENERAL) ==================== */
         .card {
             background: var(--bg-card);
             border: 1px solid var(--border-subtle);
@@ -510,11 +486,6 @@
                 grid-template-columns: 1fr 1fr 1fr;
             }
         }
-        .card-grid .card {
-            margin-bottom: 0;
-        }
-
-        /* ==================== PROJECT CARD ==================== */
         .project-card {
             background: var(--bg-card);
             border: 1px solid var(--accent-dim);
@@ -533,7 +504,7 @@
                 padding: 2rem 2.25rem;
             }
         }
-        .project-card .project-tag {
+        .project-tag {
             display: inline-block;
             font-family: var(--font-mono);
             font-size: 0.65rem;
@@ -553,8 +524,6 @@
             margin-bottom: 0;
             font-size: 0.9rem;
         }
-
-        /* ==================== CTA SECTION ==================== */
         #contact {
             text-align: center;
             padding: 3rem 0 4rem;
@@ -592,12 +561,6 @@
             pointer-events: none;
             opacity: 0.6;
         }
-        .cta-box h2 {
-            margin-bottom: 0.5rem;
-        }
-        .cta-box p {
-            margin-bottom: 1.5rem;
-        }
         .btn-cta {
             display: inline-block;
             font-family: var(--font-mono);
@@ -621,45 +584,20 @@
             text-decoration: none;
             color: #050508;
         }
-
-        /* ==================== FOOTER ==================== */
         body>footer {
             border-top: 1px solid var(--border-subtle);
             padding: 2rem 0;
             text-align: center;
             position: relative;
         }
-        .footer-watermark {
-            font-family: var(--font-mono);
-            font-size: 0.65rem;
-            letter-spacing: 0.12em;
-            color: var(--text-tertiary);
-            opacity: 0.4;
-            pointer-events: none;
-            user-select: none;
-            position: absolute;
-            bottom: 1.5rem;
-            right: 1.5rem;
-            text-transform: uppercase;
-        }
-        @media (max-width: 500px) {
-            .footer-watermark {
-                position: static;
-                margin-top: 0.5rem;
-                display: block;
-            }
-        }
         .footer-text {
             font-size: 0.8rem;
             color: var(--text-tertiary);
         }
-
-        /* ==================== ANIMATIONS ==================== */
         .fade-in {
             opacity: 0;
             transform: translateY(22px);
-            transition: opacity 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
-                transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+            transition: opacity 0.7s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
         }
         .fade-in.visible {
             opacity: 1;
@@ -677,8 +615,6 @@
         .fade-in-delay-4 {
             transition-delay: 0.32s;
         }
-
-        /* ==================== FOCUS & ACCESSIBILITY ==================== */
         :focus-visible {
             outline: 2px solid var(--accent);
             outline-offset: 3px;
@@ -695,8 +631,6 @@
             white-space: nowrap;
             border: 0;
         }
-
-        /* ==================== BLOCKQUOTE STYLE ==================== */
         blockquote {
             border-left: 3px solid var(--accent);
             padding-left: 1.25rem;
@@ -711,19 +645,12 @@
                 font-size: 1.05rem;
             }
         }
-
-        /* ==================== DIVIDER ==================== */
         .divider {
             border: none;
             border-top: 1px solid var(--border-subtle);
             margin: 0.5rem 0 2rem;
         }
-
-        /* ==================== RESPONSIVE FINE-TUNING ==================== */
         @media (max-width: 380px) {
-            .nav-brand {
-                font-size: 0.78rem;
-            }
             .metrics-grid {
                 grid-template-columns: 1fr 1fr;
                 gap: 0.6rem;
@@ -738,19 +665,11 @@
     </style>
 </head>
 <body>
-
-    <!-- ==================== HEADER / NAVBAR ==================== -->
     <header>
         <nav class="navbar" id="navbar" aria-label="Navigasi utama">
             <div class="container">
-                <a href="#hero" class="nav-brand" aria-label="Irvan Farael Hanafi - Kembali ke atas">
-                    irvanfar<span class="accent-dot">.</span>el
-                </a>
-                <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <a href="#hero" class="nav-brand" aria-label="Irvan Farael Hanafi - Kembali ke atas">irvanfar<span class="accent-dot">.</span>el</a>
+                <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
                 <ul class="nav-links" id="navLinks" role="menubar">
                     <li role="none"><a href="#metrics" role="menuitem">Metrics</a></li>
                     <li role="none"><a href="#why" role="menuitem">Relevansi</a></li>
@@ -763,216 +682,121 @@
         </nav>
     </header>
 
-    <!-- ==================== MAIN CONTENT ==================== -->
     <main>
         <article>
-
-            <!-- HERO -->
             <section id="hero" aria-labelledby="hero-heading">
                 <div class="container">
                     <span class="hero-badge fade-in">Independent Developer • Ponorogo, ID</span>
-                    <h1 id="hero-heading" class="hero-title fade-in fade-in-delay-1">
-                        Irvan Farael Hanafi:<br>18 Tahun<br>&amp; Lulusan <span class="accent-text">SMP</span>
-                    </h1>
+                    <h1 id="hero-heading" class="hero-title fade-in fade-in-delay-1">Irvan Farael Hanafi:<br>18 Tahun<br>&amp; Lulusan <span class="accent-text">SMP</span></h1>
                     <div class="hero-accent-line fade-in fade-in-delay-2"></div>
-                    <!-- Perubahan: nama ditambahkan di awal paragraf pertama -->
-                    <p class="hero-subtitle fade-in fade-in-delay-3">
-                        <strong>Irvan Farael Hanafi</strong> bukan lulusan kampus ternama. Tidak ada gelar. Hanya satu hal yang berbicara: <strong>hasil nyata</strong> — sistem dan produk digital yang digunakan secara global.
-                    </p>
-                    <p class="fade-in fade-in-delay-4" style="color: var(--text-tertiary); font-size: 0.85rem; margin-top: 0.75rem;">
-                        Bahkan AI seperti Google sempat salah mengklasifikasikannya. Ironis? Justru itu poinnya.
-                    </p>
+                    <p class="hero-subtitle fade-in fade-in-delay-3"><strong>Irvan Farael Hanafi</strong> bukan lulusan kampus ternama. Tidak ada gelar. Hanya satu hal yang berbicara: <strong>hasil nyata</strong> — sistem dan produk digital yang digunakan secara global.</p>
+                    <p class="fade-in fade-in-delay-4" style="color: var(--text-tertiary); font-size: 0.85rem; margin-top: 0.75rem;">Bahkan AI seperti Google sempat salah mengklasifikasikannya. Ironis? Justru itu poinnya.</p>
                 </div>
             </section>
 
-            <!-- KEY METRICS -->
             <section id="metrics" aria-labelledby="metrics-heading">
                 <div class="container">
                     <span class="section-label fade-in">Key Metrics</span>
                     <h2 id="metrics-heading" class="section-title fade-in fade-in-delay-1">Angka Lebih Keras dari Opini</h2>
                     <div class="metrics-grid">
-                        <div class="metric-card fade-in fade-in-delay-2">
-                            <div class="metric-number">100<span class="unit">/100</span></div>
-                            <div class="metric-label">Google PageSpeed<br>Insights Score</div>
-                        </div>
-                        <div class="metric-card fade-in fade-in-delay-3">
-                            <div class="metric-number">~48<span class="unit">%</span></div>
-                            <div class="metric-label">Traffic dari<br>United States</div>
-                        </div>
-                        <div class="metric-card fade-in fade-in-delay-3">
-                            <div class="metric-number">3<span class="unit">+</span></div>
-                            <div class="metric-label">Produk Digital<br>Live & Aktif</div>
-                        </div>
-                        <div class="metric-card fade-in fade-in-delay-4">
-                            <div class="metric-number">18<span class="unit">th</span></div>
-                            <div class="metric-label">Usia — Tanpa<br>Gelar Formal</div>
-                        </div>
+                        <div class="metric-card fade-in fade-in-delay-2"><div class="metric-number">100<span class="unit">/100</span></div><div class="metric-label">Google PageSpeed<br>Insights Score</div></div>
+                        <div class="metric-card fade-in fade-in-delay-3"><div class="metric-number">~48<span class="unit">%</span></div><div class="metric-label">Traffic dari<br>United States</div></div>
+                        <div class="metric-card fade-in fade-in-delay-3"><div class="metric-number">3<span class="unit">+</span></div><div class="metric-label">Produk Digital<br>Live & Aktif</div></div>
+                        <div class="metric-card fade-in fade-in-delay-4"><div class="metric-number">18<span class="unit">th</span></div><div class="metric-label">Usia — Tanpa<br>Gelar Formal</div></div>
                     </div>
                 </div>
             </section>
 
-            <!-- WHY RELEVANT -->
             <section id="why" aria-labelledby="why-heading">
                 <div class="container">
                     <span class="section-label fade-in">Mengapa Ini Relevan</span>
                     <h2 id="why-heading" class="section-title fade-in fade-in-delay-1">Kredensial vs Output: Industri Sudah Berubah</h2>
-                    <p class="fade-in fade-in-delay-2">
-                        Di era teknologi modern, <strong>kredensial formal semakin kehilangan bobot</strong> dibandingkan dengan output nyata. Yang dipertanyakan bukan lagi "lulusan mana?", melainkan "apa yang sudah kamu bangun?".
-                    </p>
-                    <div class="card fade-in fade-in-delay-3">
-                        <h3><span class="accent-text">◆</span> SEO &amp; Engineering Excellence</h3>
-                        <p>Portfolio website mencapai skor <strong>100/100 di Google PageSpeed Insights</strong>. Bukan sekadar cepat — dioptimasi secara sistematis untuk performa, aksesibilitas, dan best practices. Setiap milidetik diperhitungkan.</p>
-                    </div>
-                    <div class="card fade-in fade-in-delay-4">
-                        <h3><span class="accent-text">◆</span> Product dengan Use Case Nyata</h3>
-                        <p><strong>ValuLens</strong> — platform analisis fundamental saham yang dirancang untuk investor serius. Fokus pada <em>intrinsic value calculation</em>, bukan sekadar visual chart. Dibangun untuk mereka yang membaca angka, bukan ikut-ikutan.</p>
-                    </div>
-                    <div class="card fade-in fade-in-delay-4">
-                        <h3><span class="accent-text">◆</span> Global Audience</h3>
-                        <p>Hampir setengah traffic berasal dari <strong>United States (~48%)</strong>. Menunjukkan bahwa produk dan sistem yang dibangun memiliki relevansi global — bukan sekadar proyek lokal tanpa dampak.</p>
-                    </div>
+                    <p class="fade-in fade-in-delay-2">Di era teknologi modern, <strong>kredensial formal semakin kehilangan bobot</strong> dibandingkan dengan output nyata. Yang dipertanyakan bukan lagi "lulusan mana?", melainkan "apa yang sudah kamu bangun?".</p>
+                    <div class="card fade-in fade-in-delay-3"><h3><span class="accent-text">◆</span> SEO &amp; Engineering Excellence</h3><p>Portfolio website mencapai skor <strong>100/100 di Google PageSpeed Insights</strong>. Bukan sekadar cepat — dioptimasi secara sistematis untuk performa, aksesibilitas, dan best practices. Setiap milidetik diperhitungkan.</p></div>
+                    <div class="card fade-in fade-in-delay-4"><h3><span class="accent-text">◆</span> Product dengan Use Case Nyata</h3><p><strong>ValuLens</strong> — platform analisis fundamental saham yang dirancang untuk investor serius. Fokus pada <em>intrinsic value calculation</em>, bukan sekadar visual chart. Dibangun untuk mereka yang membaca angka, bukan ikut-ikutan.</p></div>
+                    <div class="card fade-in fade-in-delay-4"><h3><span class="accent-text">◆</span> Global Audience</h3><p>Hampir setengah traffic berasal dari <strong>United States (~48%)</strong>. Menunjukkan bahwa produk dan sistem yang dibangun memiliki relevansi global — bukan sekadar proyek lokal tanpa dampak.</p></div>
                 </div>
             </section>
 
-            <!-- WORKFLOW -->
             <section id="workflow" aria-labelledby="workflow-heading">
                 <div class="container">
                     <span class="section-label fade-in">Workflow</span>
                     <h2 id="workflow-heading" class="section-title fade-in fade-in-delay-1">Efficiency Over Effort</h2>
-                    <p class="fade-in fade-in-delay-2">
-                        Alih-alih bekerja secara konvensional, Irvan mengadopsi pendekatan modern: <strong>memanfaatkan AI untuk automasi task repetitif</strong>, sehingga energi dapat difokuskan pada hal yang benar-benar penting:
-                    </p>
+                    <p class="fade-in fade-in-delay-2">Alih-alih bekerja secara konvensional, Irvan mengadopsi pendekatan modern: <strong>memanfaatkan AI untuk automasi task repetitif</strong>, sehingga energi dapat difokuskan pada hal yang benar-benar penting:</p>
                     <div class="card-grid fade-in fade-in-delay-3">
-                        <div class="card">
-                            <span class="mono-label">01</span>
-                            <h3>System Architecture</h3>
-                            <p style="font-size:0.88rem;">Merancang fondasi sistem yang scalable dan maintainable sejak blueprint pertama.</p>
-                        </div>
-                        <div class="card">
-                            <span class="mono-label">02</span>
-                            <h3>Backend Scalability</h3>
-                            <p style="font-size:0.88rem;">Memastikan setiap endpoint tetap responsif meski traffic melonjak berkali lipat.</p>
-                        </div>
-                        <div class="card">
-                            <span class="mono-label">03</span>
-                            <h3>Complex Logic Design</h3>
-                            <p style="font-size:0.88rem;">Merancang logika bisnis yang presisi — zero tolerance terhadap bug kritis.</p>
-                        </div>
+                        <div class="card"><span class="mono-label">01</span><h3>System Architecture</h3><p style="font-size:0.88rem;">Merancang fondasi sistem yang scalable dan maintainable sejak blueprint pertama.</p></div>
+                        <div class="card"><span class="mono-label">02</span><h3>Backend Scalability</h3><p style="font-size:0.88rem;">Memastikan setiap endpoint tetap responsif meski traffic melonjak berkali lipat.</p></div>
+                        <div class="card"><span class="mono-label">03</span><h3>Complex Logic Design</h3><p style="font-size:0.88rem;">Merancang logika bisnis yang presisi — zero tolerance terhadap bug kritis.</p></div>
                     </div>
-                    <blockquote class="fade-in fade-in-delay-4">
-                        "Produktivitas bukan diukur dari lamanya kerja, tapi dari <strong>kualitas output</strong>. Dalam sesi coding panjang (&gt;10 jam), standar tetap tinggi: clean logic, minim error, dan zero tolerance terhadap bug."
-                    </blockquote>
+                    <blockquote class="fade-in fade-in-delay-4">"Produktivitas bukan diukur dari lamanya kerja, tapi dari <strong>kualitas output</strong>. Dalam sesi coding panjang (&gt;10 jam), standar tetap tinggi: clean logic, minim error, dan zero tolerance terhadap bug."</blockquote>
                 </div>
             </section>
 
-            <!-- BEYOND ENGINEERING -->
             <section id="beyond" aria-labelledby="beyond-heading">
                 <div class="container">
                     <span class="section-label fade-in">Beyond Engineering</span>
                     <h2 id="beyond-heading" class="section-title fade-in fade-in-delay-1">Lebih dari Sekadar Codebase</h2>
                     <p class="fade-in fade-in-delay-2">Seorang developer bukan hanya tentang kode. Berikut sisi lain yang menjaga ketajaman berpikir:</p>
                     <div class="card-grid fade-in fade-in-delay-3">
-                        <div class="card">
-                            <span class="mono-label">Rational Trader</span>
-                            <h3>Crypto dengan Logika</h3>
-                            <p style="font-size:0.88rem;">Beroperasi di market <strong>BTC, ETH, SOL</strong> dengan pendekatan berbasis analisis — bukan spekulasi emosional. Setiap keputusan punya dasar.</p>
-                        </div>
-                        <div class="card">
-                            <span class="mono-label">Outdoor Reset</span>
-                            <h3>Mental Clarity</h3>
-                            <p style="font-size:0.88rem;">Menghabiskan waktu di alam seperti <strong>Bendungan Bendo</strong> untuk menjaga kejernihan berpikir — strategi penting untuk performa jangka panjang.</p>
-                        </div>
-                        <div class="card">
-                            <span class="mono-label">Self-Maintenance</span>
-                            <h3>Disiplin Pribadi</h3>
-                            <p style="font-size:0.88rem;">Menjaga penampilan dan kesehatan sebagai bagian dari sistem. Performa tinggi datang dari <strong>tubuh dan mindset yang terjaga</strong>.</p>
-                        </div>
+                        <div class="card"><span class="mono-label">Rational Trader</span><h3>Crypto dengan Logika</h3><p style="font-size:0.88rem;">Beroperasi di market <strong>BTC, ETH, SOL</strong> dengan pendekatan berbasis analisis — bukan spekulasi emosional. Setiap keputusan punya dasar.</p></div>
+                        <div class="card"><span class="mono-label">Outdoor Reset</span><h3>Mental Clarity</h3><p style="font-size:0.88rem;">Menghabiskan waktu di alam seperti <strong>Bendungan Bendo</strong> untuk menjaga kejernihan berpikir — strategi penting untuk performa jangka panjang.</p></div>
+                        <div class="card"><span class="mono-label">Self-Maintenance</span><h3>Disiplin Pribadi</h3><p style="font-size:0.88rem;">Menjaga penampilan dan kesehatan sebagai bagian dari sistem. Performa tinggi datang dari <strong>tubuh dan mindset yang terjaga</strong>.</p></div>
                     </div>
                 </div>
             </section>
 
-            <!-- PROJECTS -->
             <section id="projects" aria-labelledby="projects-heading">
                 <div class="container">
                     <span class="section-label fade-in">Projects</span>
                     <h2 id="projects-heading" class="section-title fade-in fade-in-delay-1">Dibangun untuk Dampak Nyata</h2>
-                    <div class="project-card fade-in fade-in-delay-2">
-                        <span class="project-tag">Live Product</span>
-                        <h3>ValuLens</h3>
-                        <p>Platform analisis fundamental saham untuk investor serius. Menghitung <strong>intrinsic value</strong> dengan presisi — bukan sekadar candlestick dan hype. Dirancang untuk mereka yang butuh data, bukan dekorasi visual.</p>
-                    </div>
-                    <p class="fade-in fade-in-delay-3" style="text-align:center; margin-top:1rem; color:var(--text-tertiary); font-size:0.85rem;">
-                        Lebih banyak proyek dalam pipeline. Fokus: <strong>sistem yang menyelesaikan masalah nyata</strong>.
-                    </p>
+                    <div class="project-card fade-in fade-in-delay-2"><span class="project-tag">Live Product</span><h3>ValuLens</h3><p>Platform analisis fundamental saham untuk investor serius. Menghitung <strong>intrinsic value</strong> dengan presisi — bukan sekadar candlestick dan hype. Dirancang untuk mereka yang butuh data, bukan dekorasi visual.</p></div>
+                    <p class="fade-in fade-in-delay-3" style="text-align:center; margin-top:1rem; color:var(--text-tertiary); font-size:0.85rem;">Lebih banyak proyek dalam pipeline. Fokus: <strong>sistem yang menyelesaikan masalah nyata</strong>.</p>
                 </div>
             </section>
 
-            <!-- CLOSING STATEMENT -->
             <section id="closing" aria-labelledby="closing-heading">
                 <div class="container">
                     <hr class="divider fade-in">
                     <h2 id="closing-heading" class="section-title fade-in fade-in-delay-1">Closing Statement</h2>
-                    <p class="fade-in fade-in-delay-2">
-                        Jika yang dibutuhkan adalah sekadar <strong>eksekutor teknis</strong>, ada banyak pilihan lain di luar sana.
-                    </p>
-                    <p class="fade-in fade-in-delay-3">
-                        Namun jika yang dicari adalah <strong>partner berpikir</strong> — seseorang yang mampu merancang sistem dari nol, membaca peluang sebelum orang lain melihatnya, dan mengeksekusi dengan presisi tinggi — maka <span class="accent-text">Irvan Farael Hanafi</span> adalah kandidat yang relevan.
-                    </p>
-                    <p class="fade-in fade-in-delay-4" style="color: var(--text-tertiary); font-size: 0.85rem;">
-                        Tanpa gelar. Tanpa kampus. Tapi dengan <strong>rekam jejak yang bisa diverifikasi</strong>.
-                    </p>
+                    <p class="fade-in fade-in-delay-2">Jika yang dibutuhkan adalah sekadar <strong>eksekutor teknis</strong>, ada banyak pilihan lain di luar sana.</p>
+                    <p class="fade-in fade-in-delay-3">Namun jika yang dicari adalah <strong>partner berpikir</strong> — seseorang yang mampu merancang sistem dari nol, membaca peluang sebelum orang lain melihatnya, dan mengeksekusi dengan presisi tinggi — maka <span class="accent-text">Irvan Farael Hanafi</span> adalah kandidat yang relevan.</p>
+                    <p class="fade-in fade-in-delay-4" style="color: var(--text-tertiary); font-size: 0.85rem;">Tanpa gelar. Tanpa kampus. Tapi dengan <strong>rekam jejak yang bisa diverifikasi</strong>.</p>
                 </div>
             </section>
 
-            <!-- CONTACT / CTA -->
             <section id="contact" aria-labelledby="contact-heading">
                 <div class="container">
                     <div class="cta-box fade-in">
-                        <span class="section-label" style="display:block; text-align:center;">Let's Talk</span>
+                        <span class="section-label" style="display:block;text-align:center;">Let's Talk</span>
                         <h2 id="contact-heading">Tertarik Berkolaborasi?</h2>
                         <p>Terbuka untuk diskusi, proyek bersama, atau sekadar bertukar pikiran. Jangkau langsung — tidak ada form panjang, tidak ada recruiter di tengah.</p>
                         <a href="mailto:farellh12@gmail.com" class="btn-cta" aria-label="Kirim email ke Irvan">✉️ Kirim Email</a>
-                        <p style="margin-top:1rem; font-size:0.75rem; color:var(--text-tertiary);">
-                            Atau temukan di platform favorit Anda. <strong>@faraelh_</strong>
-                        </p>
+                        <p style="margin-top:1rem;font-size:0.75rem;color:var(--text-tertiary);">Atau temukan di platform favorit Anda. <strong>@faraelh_</strong></p>
                     </div>
                 </div>
             </section>
-
         </article>
     </main>
 
-    <!-- ==================== FOOTER ==================== -->
     <footer>
         <div class="container" style="position:relative;">
-            <p class="footer-text">
-                &copy; 2026 Irvan Farael Hanafi. Dibangun tanpa framework — hanya HTML, CSS, dan logika.
-            </p>
-            <span class="footer-watermark" aria-hidden="true">IRVANFAR.EL</span>
+            <p class="footer-text">&copy; 2026 Irvan Farael Hanafi. Dibangun tanpa framework — hanya HTML, CSS, dan logika.</p>
         </div>
     </footer>
 
-    <!-- ==================== VANILLA JS ==================== -->
     <script>
         (function() {
-            // --- DOM refs ---
             const navbar = document.getElementById('navbar');
             const navLinks = document.getElementById('navLinks');
             const navHamburger = document.getElementById('navHamburger');
             const allNavLinks = navLinks.querySelectorAll('a');
 
-            // --- Sticky navbar shadow on scroll ---
             function updateNavbarShadow() {
-                if (window.scrollY > 10) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
+                navbar.classList.toggle('scrolled', window.scrollY > 10);
             }
             window.addEventListener('scroll', updateNavbarShadow, { passive: true });
-            updateNavbarShadow(); // initial check
+            updateNavbarShadow();
 
-            // --- Mobile menu toggle ---
             function closeMenu() {
                 navLinks.classList.remove('active');
                 navHamburger.setAttribute('aria-expanded', 'false');
@@ -983,35 +807,20 @@
                 navHamburger.setAttribute('aria-expanded', 'true');
             }
 
-            function toggleMenu() {
-                if (navLinks.classList.contains('active')) {
-                    closeMenu();
-                } else {
-                    openMenu();
-                }
-            }
+            navHamburger.addEventListener('click', function() {
+                navLinks.classList.contains('active') ? closeMenu() : openMenu();
+            });
 
-            navHamburger.addEventListener('click', toggleMenu);
-
-            // Close menu when a nav link is clicked (mobile)
             allNavLinks.forEach(function(link) {
                 link.addEventListener('click', function() {
-                    if (navLinks.classList.contains('active')) {
-                        closeMenu();
-                    }
+                    if (navLinks.classList.contains('active')) closeMenu();
                 });
             });
 
-            // Close menu when clicking outside (mobile)
             document.addEventListener('click', function(e) {
-                if (navLinks.classList.contains('active') &&
-                    !navLinks.contains(e.target) &&
-                    !navHamburger.contains(e.target)) {
-                    closeMenu();
-                }
+                if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !navHamburger.contains(e.target)) closeMenu();
             });
 
-            // Close menu on Escape key
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape' && navLinks.classList.contains('active')) {
                     closeMenu();
@@ -1019,15 +828,8 @@
                 }
             });
 
-            // --- Intersection Observer for fade-in animations ---
             const fadeElements = document.querySelectorAll('.fade-in');
             if ('IntersectionObserver' in window) {
-                const observerOptions = {
-                    root: null,
-                    rootMargin: '0px 0px -40px 0px',
-                    threshold: 0.08,
-                };
-
                 const observer = new IntersectionObserver(function(entries) {
                     entries.forEach(function(entry) {
                         if (entry.isIntersecting) {
@@ -1035,19 +837,12 @@
                             observer.unobserve(entry.target);
                         }
                     });
-                }, observerOptions);
-
-                fadeElements.forEach(function(el) {
-                    observer.observe(el);
-                });
+                }, { rootMargin: '0px 0px -40px 0px', threshold: 0.08 });
+                fadeElements.forEach(el => observer.observe(el));
             } else {
-                // Fallback for browsers without IntersectionObserver
-                fadeElements.forEach(function(el) {
-                    el.classList.add('visible');
-                });
+                fadeElements.forEach(el => el.classList.add('visible'));
             }
 
-            // --- Smooth scroll offset compensation for sticky navbar ---
             allNavLinks.forEach(function(link) {
                 link.addEventListener('click', function(e) {
                     const targetId = this.getAttribute('href');
@@ -1056,58 +851,37 @@
                         const targetEl = document.querySelector(targetId);
                         if (targetEl) {
                             const navHeight = navbar.offsetHeight;
-                            const targetPosition =
-                                targetEl.getBoundingClientRect().top + window.pageYOffset - navHeight - 16;
-                            window.scrollTo({
-                                top: targetPosition,
-                                behavior: 'smooth',
-                            });
+                            const targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - navHeight - 16;
+                            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
                         }
                     }
                 });
             });
 
-            // --- Active nav link highlighting on scroll ---
             const sectionIds = [];
             allNavLinks.forEach(function(link) {
                 const href = link.getAttribute('href');
-                if (href && href.startsWith('#') && href.length > 1) {
-                    sectionIds.push(href.substring(1));
-                }
+                if (href && href.startsWith('#') && href.length > 1) sectionIds.push(href.substring(1));
             });
 
             function highlightActiveNavLink() {
                 const scrollPos = window.scrollY + navbar.offsetHeight + 80;
                 let currentSection = null;
-
                 sectionIds.forEach(function(id) {
                     const section = document.getElementById(id);
-                    if (section) {
-                        const sectionTop = section.offsetTop;
-                        if (scrollPos >= sectionTop) {
-                            currentSection = id;
-                        }
-                    }
+                    if (section && scrollPos >= section.offsetTop) currentSection = id;
                 });
-
                 allNavLinks.forEach(function(link) {
                     const href = link.getAttribute('href');
                     if (href) {
-                        const linkTarget = href.substring(1);
-                        if (linkTarget === currentSection) {
-                            link.style.color = 'var(--accent)';
-                            link.style.background = 'var(--accent-glow)';
-                        } else {
-                            link.style.color = '';
-                            link.style.background = '';
-                        }
+                        const isActive = href.substring(1) === currentSection;
+                        link.style.color = isActive ? 'var(--accent)' : '';
+                        link.style.background = isActive ? 'var(--accent-glow)' : '';
                     }
                 });
             }
-
             window.addEventListener('scroll', highlightActiveNavLink, { passive: true });
-            highlightActiveNavLink(); // initial
-
+            highlightActiveNavLink();
         })();
     </script>
 </body>
