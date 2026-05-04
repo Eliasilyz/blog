@@ -6,52 +6,83 @@
     <meta name="theme-color" content="#0a0a0a">
     <meta name="color-scheme" content="dark">
 
-    <!-- ========== SEO META (fokus pada persona + solusi) ========== -->
+    <!-- =====================================================
+         PERBAIKAN #1: Google Search Console Verification
+         Ganti "PASTE_KODE_GSC_KAMU_DI_SINI" dengan kode
+         dari GSC > Settings > Ownership Verification > HTML tag
+         ===================================================== -->
+    <meta name="google-site-verification" content="HoZgwYJz6Z5gjLcl6I91BN6MIOZDP9jMApEHGsJidqM">
+
+    <!-- ========== SEO META ========== -->
     <title>Irvan Farael Hanafi — Developer Otodidak, Problem Solver, &amp; System Architect Tanpa Gelar</title>
     <meta name="description" content="Halaman pengenalan mendalam tentang Irvan Farael Hanafi: perjalanan, filosofi, proyek (MudaeAuto, ValuLens, Lumen), keahlian teknis, dan pencapaian. Semua dibangun tanpa gelar sarjana.">
-    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large">
     <meta name="author" content="Irvan Farael Hanafi">
     <link rel="canonical" href="https://blogs.farelhanafi.my.id/">
 
-    <!-- Open Graph -->
+    <!-- PERBAIKAN #2: Sitemap dideklarasikan di <head> -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+    <!-- PERBAIKAN #3: hreflang untuk konten Bahasa Indonesia -->
+    <link rel="alternate" hreflang="id" href="https://blogs.farelhanafi.my.id/">
+    <link rel="alternate" hreflang="x-default" href="https://blogs.farelhanafi.my.id/">
+
+    <!-- ========== Open Graph (PERBAIKAN #4: og:image ditambahkan) ========== -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="Mengenal Irvan Farael Hanafi — Developer Tanpa Gelar dengan Hasil Global">
     <meta property="og:description" content="Cerita lengkap perjalanan, proyek, dan pemikiran di balik sistem digital berperforma tinggi. Dari Ponorogo untuk dunia.">
     <meta property="og:url" content="https://blogs.farelhanafi.my.id/">
     <meta property="og:site_name" content="Blog Farel">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Eliasilyz/Eliasilyz.github.io/refs/heads/main/profile.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Irvan Farael Hanafi — Developer Otodidak dari Ponorogo">
     <meta property="article:published_time" content="2026-05-03T00:00:00+07:00">
+    <meta property="article:modified_time" content="2026-05-03T00:00:00+07:00">
     <meta property="article:author" content="Irvan Farael Hanafi">
+    <meta property="article:section" content="Technology">
+    <meta property="article:tag" content="developer">
+    <meta property="article:tag" content="python">
+    <meta property="article:tag" content="backend">
 
-    <!-- Twitter -->
+    <!-- ========== Twitter (PERBAIKAN #5: twitter:image ditambahkan) ========== -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Irvan Farael Hanafi — Developer Otodidak, Problem Solver">
     <meta name="twitter:description" content="Tanpa gelar, tanpa kampus, tapi dengan sistem yang berbicara.">
     <meta name="twitter:creator" content="@faraelh_">
+    <meta name="twitter:site" content="@faraelh_">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/Eliasilyz/Eliasilyz.github.io/refs/heads/main/profile.png">
+    <meta name="twitter:image:alt" content="Irvan Farael Hanafi — Developer Otodidak dari Ponorogo">
 
-    <!-- ========== STRUCTURED DATA (Article + Person) ========== -->
+    <!-- ========== STRUCTURED DATA (PERBAIKAN #6: @id Person + inLanguage + sameAs) ========== -->
     <script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@graph": [
         {
             "@type": "Article",
+            "@id": "https://blogs.farelhanafi.my.id/#article",
             "headline": "Mengenal Irvan Farael Hanafi — Developer Otodidak, Problem Solver, & System Architect Tanpa Gelar",
             "description": "Artikel mendalam tentang perjalanan dan proyek Irvan Farael Hanafi, seorang developer otodidak asal Ponorogo yang membangun sistem digital berskala global tanpa pendidikan formal.",
+            "inLanguage": "id-ID",
             "datePublished": "2026-05-03T00:00:00+07:00",
             "dateModified": "2026-05-03T00:00:00+07:00",
-            "image": "https://raw.githubusercontent.com/Eliasilyz/Eliasilyz.github.io/refs/heads/main/profile.png",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://raw.githubusercontent.com/Eliasilyz/Eliasilyz.github.io/refs/heads/main/profile.png",
+                "width": 1200,
+                "height": 630
+            },
             "author": {
                 "@type": "Person",
-                "name": "Irvan Farael Hanafi",
-                "url": "https://farelhanafi.my.id/",
-                "sameAs": [
-                    "https://github.com/Eliasilyz",
-                    "https://www.linkedin.com/in/farel-hanafi/",
-                    "https://www.instagram.com/faraelh_/"
-                ]
+                "@id": "https://farelhanafi.my.id/#person",
+                "name": "Irvan Farael Hanafi"
             },
             "publisher": {
                 "@type": "Person",
+                "@id": "https://farelhanafi.my.id/#person",
                 "name": "Irvan Farael Hanafi"
             },
             "mainEntityOfPage": {
@@ -61,12 +92,25 @@
         },
         {
             "@type": "Person",
+            "@id": "https://farelhanafi.my.id/#person",
             "name": "Irvan Farael Hanafi",
             "givenName": "Irvan Farael",
             "familyName": "Hanafi",
-            "url": "https://blogs.farelhanafi.my.id/",
+            "url": "https://farelhanafi.my.id/",
+            "image": "https://raw.githubusercontent.com/Eliasilyz/Eliasilyz.github.io/refs/heads/main/profile.png",
             "jobTitle": "Independent Developer",
             "description": "Developer otodidak asal Ponorogo, fokus pada backend scalability, Python automation, dan SEO engineering. Membangun sistem tanpa gelar.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ponorogo",
+                "addressRegion": "Jawa Timur",
+                "addressCountry": "ID"
+            },
+            "sameAs": [
+                "https://github.com/Eliasilyz",
+                "https://www.linkedin.com/in/farel-hanafi/",
+                "https://www.instagram.com/faraelh_/"
+            ],
             "knowsAbout": [
                 "Python Automation",
                 "Backend Architecture",
@@ -76,6 +120,17 @@
                 "Next.js",
                 "PostgreSQL"
             ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://blogs.farelhanafi.my.id/#website",
+            "url": "https://blogs.farelhanafi.my.id/",
+            "name": "Blog Farel",
+            "description": "Blog Irvan Farael Hanafi — Developer Otodidak dari Ponorogo",
+            "inLanguage": "id-ID",
+            "publisher": {
+                "@id": "https://farelhanafi.my.id/#person"
+            }
         }
     ]
 }
@@ -239,7 +294,7 @@
                 sebuah pencapaian yang bahkan sulit diraih oleh website perusahaan besar.
             </p>
 
-            <h2>3. Proyek Unggulan: Bukti Nyata, Bukan Sekadar Teori</h2>
+            <h2 id="proyek">3. Proyek Unggulan: Bukti Nyata, Bukan Sekadar Teori</h2>
             <p>
                 Berikut adalah beberapa proyek konkret yang saya bangun sendiri, dari nol hingga production.
             </p>
@@ -267,7 +322,7 @@
                 </a>
             </div>
 
-            <h2>4. Keahlian Teknis: Tumpukan Teknologi yang Saya Kuasai</h2>
+            <h2 id="keahlian">4. Keahlian Teknis: Tumpukan Teknologi yang Saya Kuasai</h2>
             <p>
                 Berikut adalah bahasa pemrograman, framework, dan tools yang rutin saya gunakan dalam membangun sistem.
             </p>
@@ -321,7 +376,7 @@
             </p>
         </article>
 
-        <!-- FAQ (konten tambahan biar makin panjang & kaya) -->
+        <!-- FAQ -->
         <section id="faq" aria-labelledby="faq-title">
             <h2 id="faq-title" style="font-size:1.6rem; margin: 2rem 0 1rem;">🙋 Pertanyaan yang Sering Diajukan</h2>
             <details>
